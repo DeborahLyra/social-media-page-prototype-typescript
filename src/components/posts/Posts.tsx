@@ -58,10 +58,6 @@ export function Posts({ author, publishedAt, content }: PostProps) {
 
   }
 
-  const handleNewCommentInvalid = (event: InvalidEvent<HTMLTextAreaElement>) => {
-    event.target.setCustomValidity('Campo obrigatório')
-  }
-
   const deleteComment = (commentToDelete: string) => {
     const newCommentList = comments.filter(comment => {
       return comment !== commentToDelete
@@ -105,7 +101,7 @@ export function Posts({ author, publishedAt, content }: PostProps) {
           value={newCommentText}
           placeholder='deixe um comentário'
           onChange={handleNewCommentChange}
-          onInvalid={handleNewCommentInvalid}
+         
         />
         <footer>
           <button type='submit' disabled={isBtnDisabled}>Publicar</button>
