@@ -101,7 +101,7 @@ export function Posts({ author, publishedAt, content }: PostProps) {
           value={newCommentText}
           placeholder='deixe um comentário'
           onChange={handleNewCommentChange}
-         
+
         />
         <footer>
           <button type='submit' disabled={isBtnDisabled}>Publicar</button>
