@@ -4,6 +4,7 @@ import { Posts } from './components/posts/Posts'
 import './global.css'
 import styles from './App.module.css'
 import { Sidebar } from './components/sidebar/Sidebar'
+import { Content } from './components/posts/Posts'
 
 function App() {
 
@@ -55,7 +56,7 @@ function App() {
               return (<Posts
                 key={post.id}
                 author={post.author}
-                content={post.content}
+                content={post.content as Content[]}
                 publishedAt={post.publishedAt}
               />
               )
